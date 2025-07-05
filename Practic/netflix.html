@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="relative h-screen w-full">
+    <div class="absolute inset-0">
+      <img
+        src="netflix.jpg"
+        alt="Netflix Background"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+    </div>
+    <header
+      class="relative z-10 w-full text-white p-12 flex justify-between items-center"
+    >
+      <div>
+        <img
+          class="w-32 h-10"
+          src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+          alt="Netflix Logo"
+        />
+      </div>
+      <div class="flex items-center space-x-4 w-240">
+        <div class="border-2 border-white rounded-sm">
+          <input type="dropdown" placeholder="English" />
+        </div>
+        <div
+          class="w-24 h-10 bg-red-500 text-white text-lg flex items-center justify-center rounded-sm cursor-pointer hover:bg-red-600 transition duration-300"
+        >
+          Sign In
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="relative h-full my-auto flex flex-col items-center justify-center text-white p-12"
+    >
+      <h1 class="text-4xl font-bold">Unlimited movies, TV shows, and more.</h1>
+      <p class="mt-2">Watch anywhere. Cancel anytime.</p>
+      <p class="mt-2">
+        Ready to watch? Enter your email to create or restart your membership.
+      </p>
+      <div class="mt-4">
+        <input
+          type="email"
+          placeholder="Email address"
+          class="p-2 rounded-sm w-80"
+        />
+        <button
+          class="ml-2 bg-red-500 text-white px-4 py-2 rounded-sm hover:bg-red-600 transition duration-300"
+        >
+          Get Started
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

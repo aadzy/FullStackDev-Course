@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ranked.gg</title>
+  </head>
+  <header class="flex bg-red-500 my-auto p-12 justify-around">
+    <img src="beluga.png" width="50" height="50" />
+    <a href="index.html" class="text-white font-bold italic text-2xl">Ranked.GG</h1>
+    <nav class="space-x-6">
+      <a href="matches.html" class="hover:underline text-white">Matches</a>
+      <a href="team.html" class="hover:underline text-white">Teams</a>
+      <a href="tournaments.html" class="hover:underline text-white">Tournaments</a>
+    </nav>
+  </header>
+  <body>
+    <section class="p-12 bg-gray-100">
+      <h2 class="text-2xl font-semibold mb-4">Upcoming Tournaments</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>
+          <strong>Red Bull Clash — July 20, 2025:</strong> Regional Valorant LAN
+        </li>
+        <li>
+          <strong>Global Esports Invitational — August 5, 2025:</strong> Online
+          cross-region tournament
+        </li>
+        <li>
+          <strong>Masters Tokyo — September 10, 2025:</strong> Official VCT
+          Masters event
+        </li>
+      </ul>
+    </section>
+
+    <section class="p-12 bg-gray-100">
+      <h2 class="text-2xl font-semibold mb-4">Venue:</h2>
+      <button
+        onclick="getLocation()"
+        class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-500"
+      >
+        Get Location
+      </button>
+      <p id="location" class="mt-2 text-blue-700"></p>
+
+    </section>
+
+
+    <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=120.45410156250001%2C24.42714534008206%2C152.27050781250003%2C44.77793589631623&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=6/35.24/136.36">View Larger Map</a></small>
+  </body>
+
+  <script>
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            document.getElementById("location").textContent =
+              "Latitude: " +
+              position.coords.latitude +
+              ", Longitude: " +
+              position.coords.longitude;
+          },
+          function () {
+            document.getElementById("location").textContent =
+              "Location access denied.";
+          }
+        );
+      } else {
+        document.getElementById("location").textContent =
+          "Geolocation not supported.";
+      }
+    }
+  </script>
+
+  <footer class="bg-blue-300 text-center py-6">
+    <i>Aadharsh Krishnaa G | June 2025 &copy; Don't steal my stuff please</i>
+  </footer>
+</html>
