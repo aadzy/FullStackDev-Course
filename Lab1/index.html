@@ -4,94 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
     <title>Ranked.gg</title>
   </head>
+  <header class="flex bg-red-500 my-auto p-12 justify-around">
+    <img src="beluga.png" width="50" height="50" />
+    <h1 class="text-white font-bold italic text-2xl">Ranked.GG</h1>
+    <nav class="space-x-6">
+      <a href="matches.html" class="hover:underline text-white">Matches</a>
+      <a href="team.html" class="hover:underline text-white">Teams</a>
+      <a href="tournaments.html" class="hover:underline text-white"
+        >Tournaments</a
+      >
+    </nav>
+  </header>
   <body>
-    <header
-      class="bg-red-500 my-auto p-4 md:p-12 flex flex-wrap md:flex-nowrap justify-between items-center w-screen"
-    >
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 50 50"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="rounded-full"
-      >
-        <polygon points="25,5 45,45 5,45" fill="#e11d48" />
-        <polygon points="25,12 40,42 10,42" fill="#f59e42" />
-        <polygon points="25,20 35,40 15,40" fill="#fff" />
-      </svg>
-      <div class="flex justify-center w-full md:w-auto">
-        <h1 class="text-white font-bold italic text-2xl">Ranked.GG</h1>
-      </div>
-      <button
-        id="menu-btn"
-        class="md:hidden text-white text-3xl focus:outline-none ml-auto"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav
-        id="nav-menu"
-        class="flex-col md:flex-row flex gap-4 justify-between absolute md:static top-20 left-0 w-full md:w-auto bg-red-500 md:bg-transparent z-10 md:flex md:items-center hidden md:flex"
-      >
-        <a
-          href="matches.html"
-          class="hover:underline text-white flex items-center gap-2"
-        >
-          <i class="fas fa-trophy"></i> Matches
-        </a>
-        <a
-          href="team.html"
-          class="hover:underline text-white flex items-center gap-2"
-        >
-          <i class="fas fa-users"></i> Teams
-        </a>
-        <a
-          href="tournaments.html"
-          class="hover:underline text-white flex items-center gap-2"
-        >
-          <i class="fas fa-medal"></i> Tournaments
-        </a>
-      </nav>
-    </header>
-    <script>
-      const menuBtn = document.getElementById("menu-btn");
-      const navMenu = document.getElementById("nav-menu");
-      menuBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("hidden");
-      });
-    </script>
-
-    <section
-      class="relative flex items-center justify-center h-[60vh] bg-cover bg-center"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
-      "
-    >
-      <div
-        class="bg-black/50 p-8 rounded-lg text-center max-w-xl mx-auto"
-      >
-        <h2
-          class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg"
-        >
-          Discover Amazing Destinations
-        </h2>
-        <p class="text-lg md:text-xl text-gray-100 mb-6">
-          Explore the world of esports and witness history in the making!
-        </p>
-        <a
-          href="#matches"
-          class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded shadow-lg transition"
-          >Explore Now</a
-        >
-      </div>
-    </section>
-
     <section id="matches" class="p-12 bg-gray-100">
       <h2 class="text-2xl font-semibold mb-4">Ongoing Matches:</h2>
       <ul class="list-disc pl-5 space-y-1">
@@ -102,27 +28,6 @@
         <li>PRX vs G2</li>
       </ul>
     </section>
-
-    <section id="agents" class="p-12 bg-white">
-      <h2 class="text-2xl font-semibold mb-4">Valorant Agents</h2>
-      <div id="agents-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
-      <div id="agents-loader" class="text-gray-500 mt-4">Loading agents...</div>
-    </section>
-    <script>
-      fetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true')
-      .then(r => r.json())
-      .then(d => {
-        document.getElementById('agents-loader').style.display = 'none';
-        const a = d.data[Math.floor(Math.random() * d.data.length)];
-        const c = document.createElement('div');
-        c.className = 'bg-gray-100 rounded shadow p-4 flex flex-col items-center';
-        c.innerHTML = `<img src="${a.displayIcon}" alt="${a.displayName}" class="w-20 h-20 mb-2 rounded-full object-cover" />
-        <h3 class="font-bold mb-1">${a.displayName}</h3>
-        <p class="text-sm text-gray-700 text-center">${a.description || ''}</p>`;
-        document.getElementById('agents-list').appendChild(c);
-        document.querySelector('#agents h2').textContent = 'Agent of the Day';
-      });
-    </script>
 
     <section id="winners" class="p-12 h-full bg-gray-200">
       <h2 class="text-2xl font-semibold mb-4">Winners of MASTERS Toronto:</h2>
@@ -145,7 +50,7 @@
             class="w-20 h-20 rounded-full mb-2"
           />
           <h3 class="font-bold">Jinggg (Paper Rex)</h3>
-          <p>Explosive entry <b>fragger</b> with insane accuracy.</p>
+          <p>Explosive entry fragger with insane accuracy.</p>
         </div>
         <div
           class="bg-gray-100 p-4 rounded shadow w-full md:w-1/3 flex flex-col items-center"
@@ -234,47 +139,6 @@
           competitive gaming and its athletes across the continent.
         </li>
       </ul>
-    </section>
-
-    <section
-      class="p-12 bg-gray-100 flex flex-col md:flex-row gap-8 items-start justify-center"
-    >
-      <div class="w-full md:w-1/2">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2">
-          <i class="fas fa-video"></i> Promotional Video
-        </h2>
-        <video
-          controls
-          class="w-full rounded shadow"
-          poster="capy.png"
-        >
-          <source
-            src="Shitpost 1.mp4"
-            type="video/mp4"
-          />
-          <track
-            src="E subs.vtt"
-            kind="subtitles"
-            srclang="en"
-            label="English"
-            default
-          />
-          Your browser does not support the video tag.
-        
-      </div>
-      <div class="w-full md:w-1/2">
-        <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2">
-          <i class="fas fa-music"></i> Soothing Background Audio
-        </h2>
-        <audio controls loop ="w-full">
-          <source
-            src="purpose bass.wav"
-            type="audio/wav"
-          />
-          Your browser does not support the audio element.
-        </audio>
-        
-      </div>
     </section>
 
     <section>
