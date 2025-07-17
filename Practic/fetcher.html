@@ -7,14 +7,30 @@
   </head>
   <body onload="fetcher()">
     <h1>Fetching Data Example</h1>
+
+    <form id="blog" class="mb-6 p-4">
+      <h2 class="text-2xl font-bold mb-4">Create a Post</h2>
+      <label for="title" class="block mb-2">Title:</label>
+      <input type="text" id="title" class="border p-2 mb-4 w-full" required />
+      <label for="body" class="block mb-2">Body:</label>
+      <textarea id="body" class="border p-2 mb-4 w-full" required></textarea>
+      <button
+        type="submit"
+        class="bg-blue-500 text-white p-2 rounded"
+        onclick="handleFormSubmit(event)"
+      >
+        Submit
+      </button>
+    </form>
     <div id="posts-container"></div>
     <script>
+      let posts = [];
       function fetcher() {
         fetch("https://apis.scrimba.com/jsonplaceholder/posts")
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
-            let posts = data.slice(0, 5);
+            posts = data.slice(0, 5);
             for (post of posts) {
               document.getElementById("posts-container").innerHTML += `
                 <div class="mb-6 p-4 bg-white rounded shadow">
@@ -25,6 +41,35 @@
             }
           })
           .catch((error) => console.error("Error fetching posts:", error));
+      }
+
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const title = document.querySelector("#title");
+        const body = document.querySelector("#body");
+        const data = {
+          title: title.value,
+          body: body.value,
+        };
+
+        fetch("https://apis.scrimba.com/jsonplaceholder/posts", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((post) => {
+            posts.unshift(post);
+            document.getElementById("posts-container").innerHTML =
+              `
+    <div class="mb-6 p-4 bg-white rounded shadow">
+      <h3 class="text-lg font-bold mb-2">${post.title}</h3>
+      <p class="text-gray-700">${post.body}</p>
+    </div>
+  ` + document.getElementById("posts-container").innerHTML;
+          });
       }
     </script>
   </body>

@@ -1,13 +1,26 @@
-'use strict';
+// Challenge: Write a countdown function with a hard-coded starting number inside closure
+// Stretch goal: Write a countdown function that can count from a provided number,
+// with a provided step
 
-const name = "Reed";
-console.log(name);
+// Start
+function countdown() {
+  start = 10;
+  while (start >= 1) {
+    start--;
+    console.log(start);
+  }
+  return start;
+}
 
-var count = 100;
-count=101;
-count = 102;
-console.log(count);
+const counting = countdown();
+function countingDown(s) {
+  let start = s || 10; // Default to 10 if no argument is provided
+  while (start >= 1) {
+    start--;
+    console.log(start);
+  }
+}
 
-let price;
-price = 50;
-console.log(price)
+console.log(countingDown(3));
+console.log(countingDown(5));
+console.log(countingDown(27));

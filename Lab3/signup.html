@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mx-auto p-6">
+      <h1 class="text-3xl font-bold mb-6">Sign Up</h1>
+      <form action="#" method="POST" class="bg-white rounded-lg shadow-md p-6">
+        <div class="mb-4">
+          <label id="name" class="block text-gray-700 font-bold">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="border border-gray-300 rounded-lg p-2 w-full"
+          />
+        </div>
+        <div class="mb-4">
+          <label id="email" class="block text-gray-700 font-bold">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="border border-gray-300 rounded-lg p-2 w-full"
+          />
+        </div>
+        <div class="mb-4 gap-2 flex-col">
+          <label id="contact" class="block text-gray-700 font-bold"
+            >Contact Number</label
+          >
+          <select name="countryCode" id="countryCode"  class="border border-gray-300 rounded-lg p-2 w-full>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+91" selected>🇮🇳 +91</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+81">🇯🇵 +81</option>
+            <option value="+61">🇦🇺 +61</option>
+          </select>
+          <input
+            type="text"
+            id="contact"
+            name="contact"
+            required
+            class="border border-gray-300 rounded-lg p-2 w-full"
+          />
+        </div>
+        <div class="mb-4">
+          <label id="age" class="block text-gray-700 font-bold">Age</label>
+          <input
+            type="text"
+            id="age"
+            name="age"
+            required
+            class="border border-gray-300 rounded-lg p-2 w-full"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label id="country" class="block text-gray-700 font-bold">Country</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            required
+            class="border border-gray-300 rounded-lg p-2 w-full"
+          />
+        </div>
+
+        <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Preferred Roles</label>
+        <div class="flex flex-col space-y-2">
+            <label class="inline-flex items-center">
+            <input type="checkbox" name="preferredRoles" value="usher" class="form-checkbox text-indigo-600">
+            <span class="ml-2">Usher</span>
+            </label>
+            <label class="inline-flex items-center">
+            <input type="checkbox" name="preferredRoles" value="technical_support" class="form-checkbox text-indigo-600">
+            <span class="ml-2">Technical Support</span>
+            </label>
+            <label class="inline-flex items-center">
+            <input type="checkbox" name="preferredRoles" value="social_media" class="form-checkbox text-indigo-600">
+            <span class="ml-2">Social Media</span>
+            </label>
+            <label class="inline-flex items-center">
+            <input type="checkbox" name="preferredRoles" value="registration_desk" class="form-checkbox text-indigo-600">
+            <span class="ml-2">Registration Desk</span>
+            </label>
+            <label class="inline-flex items-center">
+            <input type="checkbox" name="preferredRoles" value="logistics" class="form-checkbox text-indigo-600">
+            <span class="ml-2">Logistics</span>
+            </label>
+            <label class="inline-flex items-center">
+            <input type="checkbox" name="preferredRoles" value="crowd_management" class="form-checkbox text-indigo-600">
+            <span class="ml-2">Crowd Management</span>
+            </label>
+            <label class="inline-flex items-center">
+            <input type="checkbox" name="preferredRoles" value="photography_videography" class="form-checkbox text-indigo-600">
+            <span class="ml-2">Photography / Videography</span>
+            </label>
+        </div>
+        </div>
+
+
+        <div class="mb-4">
+          <label id="volunteerReason" class="block text-gray-700 font-bold">Why do you want to volunteer?</label>
+          <p class="block text-gray-700">Tell us why you are interested and vouch for your eligibility and share your previous Experience (if any)</p>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            required
+            class="border border-gray-300 rounded-lg p-2 w-full h-48"
+          />
+        </div>
+        
+        <div class="mb-4">
+          <label id="willingToTravel" class="block text-gray-700 font-bold">Are you willing to travel?</label>
+          <input
+            type="radio"
+            id="willingToTravel"
+            name="willingToTravel"
+            required
+          />
+          <label for="willingToTravel">Yes</label>
+          <input
+            type="radio"
+            id="notwillingToTravel"
+            name="willingToTravel"
+            required
+          />
+          <label for="notwillingToTravel">No</label>
+        </div>
+
+        <div class="mb-4">
+          <label id="rank" class="block text-gray-700 font-bold">What's your rank?</label>
+          <select name="rank" id="rank" class="border border-gray-300 rounded-lg p-2 w-full">
+            <option value="bronze">Bronze</option>
+            <option value="silver">Silver</option>
+            <option value="gold" selected>Gold</option>
+            <option value="platinum">Platinum</option>
+            <option value="diamond">Diamond</option>
+            <option value="ascendant">Ascendant</option>
+            <option value="immortal">Immortal</option>
+            <option value="radiant">Radiant</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label id="tshirtSize" class="block text-gray-700 font-bold">T-Shirt Size (for event apparel)</label>
+          <select name="tshirtSize" id="tshirtSize" class="border border-gray-300 rounded-lg p-2 w-full">
+            <option value="s">Small</option>
+            <option value="m">Medium</option>
+            <option value="l">Large</option>
+            <option value="xl">Extra Large</option>
+          </select>
+        </div>
+
+        <button
+          type="submit"
+          class="bg-blue-500 text-white font-semibold px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Sign Up
+        </button>
+      </form>
+
+    </div>
+  </body>
+</html>
