@@ -21,7 +21,7 @@ function displayProducts(products) {
       "bg-white p-4 rounded shadow w-60 text-center hover:scale-105 transition-transform";
 
     card.innerHTML = `
-          <img src="${product.images[0]}" alt="${product.title}" class="h-40 w-full object-contain mb-2 rounded" />
+          <img src="${product.thumbnail}" alt="${product.title}" class="h-40 w-full object-contain mb-2 rounded" />
           <h2 class="text-sm font-semibold h-12 overflow-hidden">${product.title}</h2>
           <p class="text-gray-600 font-medium">₹${product.price}</p>
         `;
