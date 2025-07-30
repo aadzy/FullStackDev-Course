@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Collection System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .rating-input:checked + .rating-label {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Student Feedback Collection</h1>
+            
+        </div>
+
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Submit Your Feedback</h2>
+            
+            <form id="feedbackForm" class="space-y-6">
+                <div>
+                    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                    <input type="email" id="email" name="email" required 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+
+                <div>
+                    <label for="department" class="block text-sm font-medium text-gray-700 mb-2">Department *</label>
+                    <select id="department" name="department" required 
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <option value="">Select Department</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Session Rating *</label>
+                    <div class="flex space-x-2">
+                        <input type="radio" id="rating1" name="rating" value="1" class="rating-input hidden" required>
+                        <label for="rating1" class="rating-label flex-1 text-center py-2 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-50">1</label>
+                        
+                        <input type="radio" id="rating2" name="rating" value="2" class="rating-input hidden" required>
+                        <label for="rating2" class="rating-label flex-1 text-center py-2 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-50">2</label>
+                        
+                        <input type="radio" id="rating3" name="rating" value="3" class="rating-input hidden" required>
+                        <label for="rating3" class="rating-label flex-1 text-center py-2 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-50">3</label>
+
+                        <input type="radio" id="rating4" name="rating" value="4" class="rating-input hidden" required>
+                        <label for="rating4" class="rating-label flex-1 text-center py-2 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-50">4</label>
+                        
+                        <input type="radio" id="rating5" name="rating" value="5" class="rating-input hidden" required>
+                        <label for="rating5" class="rating-label flex-1 text-center py-2 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-50">5</label>
+                        
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>Poor</span>
+                        <span>Excellent</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="comments" class="block text-sm font-medium text-gray-700 mb-2">Additional Comments</label>
+                    <textarea id="comments" name="comments" rows="4" 
+                              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                              placeholder="Share your thoughts about the lecture..."></textarea>
+                    <div class="text-right text-sm text-gray-500 mt-1">
+                        <span id="charCount">0</span> characters
+                    </div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <button type="submit" 
+                            class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors">
+                        Submit Feedback
+                    </button>
+                   
+                </div>
+            </form>
+        </div>
+
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">All Feedbacks</h2>
+            <div id="feedbacksContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+            <div id="noFeedbacks" class="text-center py-8 text-gray-500">
+                No feedbacks submitted yet. Be the first to share your thoughts!
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
