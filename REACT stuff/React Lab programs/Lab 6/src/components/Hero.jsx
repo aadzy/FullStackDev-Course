@@ -1,9 +1,11 @@
+import heroImage from '../assets/1361411.jpeg'
+
 const Hero = () => {
   return (
     <section
       className="relative flex items-center justify-center h-[60vh] bg-cover bg-center"
       style={{
-        backgroundImage: "url('/1361411.jpeg')"
+        backgroundImage: `url(${heroImage})`
       }}
     >
       <div className="bg-black/50 p-8 rounded-lg text-center max-w-xl mx-auto">

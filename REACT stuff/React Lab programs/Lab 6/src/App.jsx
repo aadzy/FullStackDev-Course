@@ -3,7 +3,6 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Matches from './components/Matches'
 import Agents from './components/Agents'
-import Winners from './components/Winners'
 import Players from './components/Players'
 import News from './components/News'
 import VolunteerForm from './components/VolunteerForm'  
@@ -17,7 +16,6 @@ function App() {
       <Hero />
       <Matches />
       <Agents />
-      <Winners />
       <Players />
       <News />
       <VolunteerForm />
