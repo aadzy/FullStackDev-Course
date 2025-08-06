@@ -1,0 +1,12 @@
+{
+  "name": "val-agents",
+  "version": "1.0.0",
+  "description": "API for val agents",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Aadzy",
+  "license": "ISC"
+}
