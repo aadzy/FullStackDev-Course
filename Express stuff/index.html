@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valorant Players Directory</title>
+  <script defer src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto bg-white shadow-xl rounded-lg p-6">
+    <h1 class="text-2xl font-bold mb-4 text-center text-blue-700">Valorant Players Directory</h1>
+
+    <form id="searchForm" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <select id="team" class="border p-2 rounded shadow">
+        <option value="">Select Team</option>
+        <option value="Paper Rex">Paper Rex</option>
+        <option value="Evil Geniuses">Evil Geniuses</option>
+        <option value="DRX">DRX</option>
+        <option value="LOUD">LOUD</option>
+        <option value="Fnatic">Fnatic</option>
+        <option value="EDward Gaming">EDward Gaming</option>
+      </select>
+      <select id="role" class="border p-2 rounded shadow">
+        <option value="">Select Role</option>
+        <option value="Duelist">Duelist</option>
+        <option value="Controller">Controller</option>
+        <option value="Initiator">Initiator</option>
+        <option value="Sentinel">Sentinel</option>
+      </select>
+      <button type="submit" class="col-span-1 md:col-span-3 bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Search Players</button>
+    </form>
+
+    <div id="results" class="space-y-4"></div>
+  </div>
+</body>
+</html>

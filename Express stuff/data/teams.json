@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "FunPlus Phoenix",
+    "abbreviation": "FPX",
+    "region": "EMEA",
+    "ranking": 1,
+    "players": ["Jingg", "something", "f0rsakeN", "d4v41", "mindfreak"],
+    "coach": "Coach FPX",
+    "founded": 2020,
+    "achievements": ["VCT Champions 2023", "VCT Masters Tokyo 2023"],
+    "logo": "https://example.com/fpx-logo.png"
+  },
+  {
+    "id": 2,
+    "name": "Evil Geniuses",
+    "abbreviation": "EG",
+    "region": "Americas",
+    "ranking": 2,
+    "players": ["Demon1", "C0M", "Boostio", "Ethan", "jawgemo"],
+    "coach": "Coach EG",
+    "founded": 1999,
+    "achievements": ["VCT Champions 2023 Runner-up", "VCT Masters Berlin 2023"],
+    "logo": "https://example.com/eg-logo.png"
+  },
+  {
+    "id": 3,
+    "name": "DRX",
+    "abbreviation": "DRX",
+    "region": "APAC",
+    "ranking": 3,
+    "players": ["Rb", "Zest", "stax", "BuZz", "MaKo"],
+    "coach": "Coach DRX",
+    "founded": 2019,
+    "achievements": ["VCT Champions 2022", "VCT Masters Reykjavik 2022"],
+    "logo": "https://example.com/drx-logo.png"
+  },
+  {
+    "id": 4,
+    "name": "LOUD",
+    "abbreviation": "LOUD",
+    "region": "Americas",
+    "ranking": 4,
+    "players": ["aspas", "Less", "saadhak", "tuyz", "cauanzin"],
+    "coach": "Coach LOUD",
+    "founded": 2019,
+    "achievements": ["VCT Champions 2022 Runner-up", "VCT Masters Copenhagen 2022"],
+    "logo": "https://example.com/loud-logo.png"
+  },
+  {
+    "id": 5,
+    "name": "Paper Rex",
+    "abbreviation": "PRX",
+    "region": "APAC",
+    "ranking": 5,
+    "players": ["Jingg", "something", "f0rsakeN", "d4v41", "mindfreak"],
+    "coach": "Coach PRX",
+    "founded": 2020,
+    "achievements": ["VCT Masters Tokyo 2023", "VCT Pacific League 2023"],
+    "logo": "https://example.com/prx-logo.png"
+  },
+  {
+    "id": 6,
+    "name": "Fnatic",
+    "abbreviation": "FNC",
+    "region": "EMEA",
+    "ranking": 6,
+    "players": ["Derke", "Alfajer", "Leo", "Boaster", "Chronicle"],
+    "coach": "Coach FNC",
+    "founded": 2004,
+    "achievements": ["VCT Masters Tokyo 2023", "VCT EMEA League 2023"],
+    "logo": "https://example.com/fnc-logo.png"
+  },
+  {
+    "id": 7,
+    "name": "Natus Vincere",
+    "abbreviation": "NAVI",
+    "region": "EMEA",
+    "ranking": 7,
+    "players": ["ANGE1", "Sh1ro", "b1t", "Perfecto", "electronic"],
+    "coach": "Coach NAVI",
+    "founded": 2009,
+    "achievements": ["VCT Masters Copenhagen 2022", "VCT EMEA League 2022"],
+    "logo": "https://example.com/navi-logo.png"
+  },
+  {
+    "id": 8,
+    "name": "EDward Gaming",
+    "abbreviation": "EDG",
+    "region": "China",
+    "ranking": 8,
+    "players": ["ZmjjKK", "CHICHOO", "Haodong", "Smoggy", "Nobody"],
+    "coach": "Coach EDG",
+    "founded": 2013,
+    "achievements": ["VCT Champions 2023", "VCT China League 2023"],
+    "logo": "https://example.com/edg-logo.png"
+  }
+] 

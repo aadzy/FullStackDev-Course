@@ -1,0 +1,192 @@
+export const data = [
+    {
+      "id": 1,
+      "name": "Jingg",
+      "realName": "Jing Jie Wang",
+      "team": "Paper Rex",
+      "role": "Duelist",
+      "agents": ["Jett", "Raze", "Phoenix"],
+      "region": "APAC",
+      "country": "Singapore",
+      "age": 21,
+      "stats": {
+        "averageCombatScore": 245.6,
+        "killDeathRatio": 1.32,
+        "headshotPercentage": 28.5,
+        "averageDamagePerRound": 150.2
+      },
+      "achievements": ["VCT Masters Tokyo 2023 MVP", "VCT Pacific League 2023"],
+      "photo": "https://example.com/jingg-photo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Demon1",
+      "realName": "Max Mazanov",
+      "team": "Evil Geniuses",
+      "role": "Duelist",
+      "agents": ["Jett", "Raze", "Reyna"],
+      "region": "Americas",
+      "country": "United States",
+      "age": 20,
+      "stats": {
+        "averageCombatScore": 252.1,
+        "killDeathRatio": 1.45,
+        "headshotPercentage": 32.1,
+        "averageDamagePerRound": 165.8
+      },
+      "achievements": ["VCT Champions 2023 MVP", "VCT Masters Berlin 2023"],
+      "photo": "https://example.com/demon1-photo.jpg"
+    },
+    {
+      "id": 3,
+      "name": "stax",
+      "realName": "Kim Gu-taek",
+      "team": "DRX",
+      "role": "Initiator",
+      "agents": ["Sova", "Fade", "Breach"],
+      "region": "APAC",
+      "country": "South Korea",
+      "age": 23,
+      "stats": {
+        "averageCombatScore": 198.3,
+        "killDeathRatio": 1.18,
+        "headshotPercentage": 25.7,
+        "averageDamagePerRound": 125.4
+      },
+      "achievements": ["VCT Champions 2022", "VCT Masters Reykjavik 2022"],
+      "photo": "https://example.com/stax-photo.jpg"
+    },
+    {
+      "id": 4,
+      "name": "aspas",
+      "realName": "Erick Santos",
+      "team": "LOUD",
+      "role": "Duelist",
+      "agents": ["Jett", "Raze", "Phoenix"],
+      "region": "Americas",
+      "country": "Brazil",
+      "age": 22,
+      "stats": {
+        "averageCombatScore": 248.9,
+        "killDeathRatio": 1.38,
+        "headshotPercentage": 29.8,
+        "averageDamagePerRound": 158.7
+      },
+      "achievements": ["VCT Champions 2022 Runner-up", "VCT Masters Copenhagen 2022"],
+      "photo": "https://example.com/aspas-photo.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Derke",
+      "realName": "Nikita Sirmitev",
+      "team": "Fnatic",
+      "role": "Duelist",
+      "agents": ["Jett", "Raze", "Reyna"],
+      "region": "EMEA",
+      "country": "Finland",
+      "age": 21,
+      "stats": {
+        "averageCombatScore": 241.2,
+        "killDeathRatio": 1.29,
+        "headshotPercentage": 27.3,
+        "averageDamagePerRound": 152.1
+      },
+      "achievements": ["VCT Masters Tokyo 2023", "VCT EMEA League 2023"],
+      "photo": "https://example.com/derke-photo.jpg"
+    },
+    {
+      "id": 6,
+      "name": "ZmjjKK",
+      "realName": "Zheng Yongkang",
+      "team": "EDward Gaming",
+      "role": "Duelist",
+      "agents": ["Jett", "Raze", "Phoenix"],
+      "region": "China",
+      "country": "China",
+      "age": 20,
+      "stats": {
+        "averageCombatScore": 256.7,
+        "killDeathRatio": 1.52,
+        "headshotPercentage": 31.2,
+        "averageDamagePerRound": 168.9
+      },
+      "achievements": ["VCT Champions 2023", "VCT China League 2023"],
+      "photo": "https://example.com/zmjjkk-photo.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Boaster",
+      "realName": "Jake Howlett",
+      "team": "Fnatic",
+      "role": "Controller",
+      "agents": ["Omen", "Viper", "Astra"],
+      "region": "EMEA",
+      "country": "United Kingdom",
+      "age": 25,
+      "stats": {
+        "averageCombatScore": 185.4,
+        "killDeathRatio": 1.05,
+        "headshotPercentage": 22.1,
+        "averageDamagePerRound": 118.7
+      },
+      "achievements": ["VCT Masters Tokyo 2023", "VCT EMEA League 2023"],
+      "photo": "https://example.com/boaster-photo.jpg"
+    },
+    {
+      "id": 8,
+      "name": "saadhak",
+      "realName": "Matias Delipetro",
+      "team": "LOUD",
+      "role": "Controller",
+      "agents": ["Omen", "Viper", "Astra"],
+      "region": "Americas",
+      "country": "Argentina",
+      "age": 24,
+      "stats": {
+        "averageCombatScore": 192.1,
+        "killDeathRatio": 1.12,
+        "headshotPercentage": 24.5,
+        "averageDamagePerRound": 125.3
+      },
+      "achievements": ["VCT Champions 2022 Runner-up", "VCT Masters Copenhagen 2022"],
+      "photo": "https://example.com/saadhak-photo.jpg"
+    },
+    {
+      "id": 9,
+      "name": "something",
+      "realName": "Ilya Petrov",
+      "team": "Paper Rex",
+      "role": "Initiator",
+      "agents": ["Sova", "Fade", "Breach"],
+      "region": "APAC",
+      "country": "Russia",
+      "age": 22,
+      "stats": {
+        "averageCombatScore": 203.7,
+        "killDeathRatio": 1.21,
+        "headshotPercentage": 26.8,
+        "averageDamagePerRound": 132.5
+      },
+      "achievements": ["VCT Masters Tokyo 2023", "VCT Pacific League 2023"],
+      "photo": "https://example.com/something-photo.jpg"
+    },
+    {
+      "id": 10,
+      "name": "C0M",
+      "realName": "Corbin Lee",
+      "team": "Evil Geniuses",
+      "role": "Controller",
+      "agents": ["Omen", "Viper", "Astra"],
+      "region": "Americas",
+      "country": "United States",
+      "age": 23,
+      "stats": {
+        "averageCombatScore": 189.5,
+        "killDeathRatio": 1.08,
+        "headshotPercentage": 23.4,
+        "averageDamagePerRound": 121.8
+      },
+      "achievements": ["VCT Champions 2023 Runner-up", "VCT Masters Berlin 2023"],
+      "photo": "https://example.com/c0m-photo.jpg"
+    }
+]

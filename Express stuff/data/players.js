@@ -1,4 +1,4 @@
-[
+export const data = [
     {
       "id": 1,
       "name": "Jingg",
@@ -189,4 +189,4 @@
       "achievements": ["VCT Champions 2023 Runner-up", "VCT Masters Berlin 2023"],
       "photo": "https://example.com/c0m-photo.jpg"
     }
-  ]
+]
