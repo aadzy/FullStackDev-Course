@@ -1,7 +1,6 @@
 import http from 'node:http'
 import {getDataFromDB} from './database/db.js'
 import { sendJSONResponse } from './utils/sendJSONResponse.js'
-import { getDataByQueryParams } from './utils/getDataByQueryParams.js'
 
 const PORT=8000
 const server= http.createServer(async(req,res)=>{
@@ -12,15 +11,20 @@ const urlObj = new URL(req.url, `http://${req.headers.host}`)
   
 
   if (urlObj.pathname === '/api' && req.method === 'GET') {
-      let filteredData=getDataByQueryParams(players,queryObj)
+      let filteredData=getPlayersByQueryParams(players,queryObj)
       console.log(queryObj)
         sendJSONResponse(res,200,filteredData)
   }
-  else if (urlObj.pathname === '/api/roles' && req.method === 'GET') {
-      let filteredData = getPlayersByQueryParams(players, queryObj)
-      console.log('Player query:', queryObj)
-      sendJSONResponse(res,200,filteredData)
-  }
+  // else if (urlObj.pathname === '/api/players' && req.method === 'GET') {
+  //     let filteredData = getPlayersByQueryParams(players, queryObj)
+  //     console.log('Player query:', queryObj)
+  //     sendJSONResponse(res,200,filteredData)
+  // }
+  // else if (urlObj.pathname === '/api/roles' && req.method === 'GET') {
+  //     let filteredData = getPlayersByQueryParams(players, queryObj)
+  //     console.log('Player query:', queryObj)
+  //     sendJSONResponse(res,200,filteredData)
+  // }
   else{
     sendJSONResponse(res,404,({error:'not found',message:'Requested route is not exist'}))
 

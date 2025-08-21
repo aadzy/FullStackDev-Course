@@ -8,7 +8,7 @@ document.getElementById("searchForm").addEventListener("submit", async function 
   if (team) params.append("team", team);
   if (role) params.append("role", role);
 
-  const url = `http://localhost:8000/api/players?${params.toString()}`;
+  const url = `http://localhost:8000/api?${params.toString()}`;
 
   try {
     const response = await fetch(url);
